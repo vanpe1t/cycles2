@@ -9,7 +9,7 @@ public class Main {
 
         while (summ <= result) {
 
-            summ = summ + (15000 + (summ * 0.01));
+            summ += 15000 + (summ * 0.01);
             monthCount++;
 
             System.out.println("Месяц " + monthCount + ", сумма накоплений равна " + String.format("%.2f", summ) + " рублей");
@@ -41,13 +41,13 @@ public class Main {
         System.out.println();
         System.out.println("Задание 1.3");
 
-        int Y = 12000000;
+        int populationOfY = 12000000;
 
         for (int j = 1; j <= 10; j++) {
 
-            Y = Y + (12000000 / 1000) * (17 - 8);
+            populationOfY += (populationOfY / 1000) * (17 - 8);
 
-            System.out.println("Год " +  j + ", численность населения составляет "  + Y);
+            System.out.println("Год " +  j + ", численность населения составляет "  + populationOfY);
 
         }
 
@@ -60,7 +60,7 @@ public class Main {
         while (summTotal <= 12000000) {
 
             monthCount++;
-            summTotal = summTotal + summTotal * 0.07;
+            summTotal += summTotal * 0.07;
             System.out.println("Месяцев " + monthCount + " сумма " + String.format("%.2f", summTotal));
 
         }
@@ -74,7 +74,7 @@ public class Main {
         while (summTotal <= 12000000) {
 
             monthCount++;
-            summTotal = summTotal + summTotal * 0.07;
+            summTotal += summTotal * 0.07;
 
             if (monthCount % 6 == 0) {
                 System.out.println("Месяцев " + monthCount + " сумма " + String.format("%.2f", summTotal));
@@ -90,7 +90,7 @@ public class Main {
         while (months != (12 * years)) {
 
             months++;
-            summTotal = summTotal + summTotal * 0.07;
+            summTotal += summTotal * 0.07;
 
             if (months % 6 == 0) {
                 System.out.println("Месяцев " + months + " сумма " + String.format("%.2f", summTotal));
@@ -104,8 +104,8 @@ public class Main {
 
         for (i = 1; i <= 31; i++) {
             if (i ==  dayFriday) {
-                System.out.println("Сегодня пятница, "  + i + "-е число. Необходимо подготовить отчет.");
-                dayFriday = dayFriday + 7;
+                System.out.println("Сегодня пятница, "  + dayFriday + "-е число. Необходимо подготовить отчет.");
+                dayFriday += 7;
             }
         }
 
